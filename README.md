@@ -4,10 +4,10 @@ This is Java app that I'm currently working on as a JetBrains Academy Assignment
 **Right now it's on an early stage of development. Actual features will be added soon!**
 
 # Features 🖥
-- This app does basically nothing useful at the moment!
+- Search for provided values in user input
 
 # What's working ✅
-- Nothing 🥴
+- Option to search for a given phrase or character
 
 # Technologies used 🔧
 - Java
