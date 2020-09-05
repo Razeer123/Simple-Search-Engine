@@ -5,6 +5,8 @@ import java.util.List;
 
 public class StringEngine {
 
+    // Finds word in a given line
+
     public boolean findWord(String inputLine, String toSearch) {
 
         String[] wordList =  inputLine.split(" ");
@@ -18,6 +20,8 @@ public class StringEngine {
 
         return index != 0;
     }
+
+    // Searches multiple lines of input and saves indexes of suitable lines
 
     public List<Integer> findIndexesArray(List<String> inputList, String query) {
 
