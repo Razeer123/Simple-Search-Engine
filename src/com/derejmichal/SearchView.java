@@ -1,5 +1,7 @@
 package com.derejmichal;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -9,19 +11,22 @@ public class SearchView {
     static List<String> inputList = new ArrayList<>();
     static Scanner scanner = new Scanner(System.in);
     static StringEngine engine = new StringEngine();
+    static StringBuilder path = new StringBuilder();
     static int choice;
 
-    public static void getValues() {
+    // Reading Strings from file and adding them to a temporary list
 
-        System.out.println("Enter the number of people:");
-        int inputNumber = scanner.nextInt();
+    public static void readFile() {
 
-        System.out.println("Enter all people:");
-        scanner.nextLine();
-        for (int i = 0; i < inputNumber; i++) {
-            inputList.add(scanner.nextLine());
+        File file = new File(path.toString());
+
+        try (Scanner fileScanner = new Scanner(file)) {
+            while (fileScanner.hasNext()) {
+                inputList.add(fileScanner.nextLine());
+            }
+        } catch (FileNotFoundException e) {
+            System.out.println("No file found: " + path.toString());
         }
-
     }
 
     public static void menu() {
