@@ -4,7 +4,7 @@ This is Java app that I'm currently working on as a JetBrains Academy Assignment
 **Right now it's on an early stage of development. Actual features will be added soon!**
 
 # Features 🖥
-- Search for provided values in user input
+- Search for provided values in a given file
 
 # What's working ✅
 - Option to search for a given phrase or character
